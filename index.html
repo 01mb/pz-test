@@ -474,7 +474,7 @@ input {
     min-height: 890px;
     position: relative;
     z-index: 1;
-    padding-top: 180px;
+    padding-top: 230px;
 }
 
 .n_banner_content {
@@ -1384,7 +1384,8 @@ input[type="submit"] {
     }
 
     .elementor-358 .elementor-element.elementor-element-595c7d6 .n_banner_content h2 {
-        margin: auto !important;
+        /* margin: auto !important; */
+        margin-top: 45px;
     }
 
     .elementor-358 .elementor-element.elementor-element-595c7d6 .n_banner_content p {
@@ -1578,6 +1579,7 @@ input[type="submit"] {
         line-height: 35px !important;
     }
 
+    
     .elementor-358 .elementor-element.elementor-element-595c7d6 .n_banner_content h2 {
         width: 100% !important;
     }
@@ -2078,7 +2080,7 @@ input[type="submit"] {
     max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: -30px;
+    /* margin-top: -30px; */
   }	
 }	
   </style>
@@ -2088,12 +2090,12 @@ input[type="submit"] {
 <div id="fixed-top-sticky-wrapper" class="sticky-wrapper" style="height: 138.183px;"><nav id="fixed-top" class="navbar navbar-toggleable-sm transparent-nav navbar-expand-lg">
 <div class="container">
 <a class="navbar-brand" href="https://paymentz.com/">
-<img src="assests/White_Paymentz_TM.png" data-rjs="" alt="Paymentz">
+<img src="assests/White_Paymentz_TM.png" data-rjs="" id="darklogo" alt="Paymentz">
 <img src="assests/Paymentz-logo-TM.png" data-rjs="" alt="Paymentz">
 </a>
 
-<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="icon-bar"></span>
+<button class="navbar-toggler collapsed" id="menubtn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="icon-bar" id="menuicon"></span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
@@ -2118,7 +2120,7 @@ input[type="submit"] {
 <ul class="mega-sub-menu">
 <li class="mega-menu-column mega-menu-columns-6-of-12" id="mega-menu-3104-0-0">
 <ul class="mega-sub-menu">
-<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-7045" id="mega-menu-item-7045"><a class="dashicons-arrow-right-alt2 mega-menu-link" href="https://paymentz.com/about-us/">About Us</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-7046" id="mega-menu-item-7046"><a class="dashicons-arrow-right-alt2 mega-menu-link" href="https://paymentz.com/contact-us-2/">Contact Us</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-12082" id="mega-menu-item-12082"><a class="dashicons-arrow-right-alt2 mega-menu-link" href="https://paymentz.com/careers-2/">Careers</a></li> </ul>
+<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-7045" id="mega-menu-item-7045"><a class="dashicons-arrow-right-alt2 mega-menu-link" href="aboutus.html">About Us</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-7046" id="mega-menu-item-7046"><a class="dashicons-arrow-right-alt2 mega-menu-link" href="https://paymentz.com/contact-us-2/">Contact Us</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-has-icon mega-icon-left mega-menu-item-12082" id="mega-menu-item-12082"><a class="dashicons-arrow-right-alt2 mega-menu-link" href="https://paymentz.com/careers-2/">Careers</a></li> </ul>
 </li><li class="mega-menu-column mega-menu-columns-6-of-12" id="mega-menu-3104-0-1">
 <ul class="mega-sub-menu">
 <li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-has-icon mega-icon-left mega-menu-item-8616" id="mega-menu-item-8616"><a class="dashicons-arrow-right-alt2 mega-menu-link" href="#">Support<span class="mega-indicator" data-has-click-event="true"></span></a>
@@ -4137,7 +4139,16 @@ document.getElementById("heading3").addEventListener("click",function(e){
 document.getElementById("heading4").addEventListener("click",function(e){
     document.getElementById("custom-product-img").innerHTML=`<div class="elementor-widget-container"><img src="pz-img/24_7_image.png"></div>`;
     e.preventDefault;
-});	</script>
+});	
+
+const menubtn = document.getElementById("menubtn");
+menubtn.addEventListener('click', function() {
+ document.getElementById("fixed-top").style.background = "white";
+ document.getElementById("darklogo").src = 'assests/Paymentz-logo-TM.png';
+ event.preventDefault();
+});
+
+</script>
 
 <div id="catapult-cookie-bar" class=""><div class="ctcc-inner "><span class="ctcc-left-side">By
  continuing to use this website, or closing this message, you agree to 
